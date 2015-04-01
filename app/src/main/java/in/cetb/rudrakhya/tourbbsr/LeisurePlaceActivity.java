@@ -1,7 +1,6 @@
 package in.cetb.rudrakhya.tourbbsr;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -11,36 +10,30 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 
-
-public class TourismPlaceActivity extends ActionBarActivity {
+public class LeisurePlaceActivity extends ActionBarActivity {
 
     String  placeName;
-    String placeDesc;
     String placeLoc;
     Integer placeIMG;
-    TextView tvName, tvDesc, tvLoc;
+    TextView tvName, tvLoc;
     ImageView ivIMG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tourism_place);
+        setContentView(R.layout.activity_leisure_place);
 
         Intent intent = getIntent();
-        placeName = intent.getStringExtra(TourismActivity.TPNAME);
-        placeDesc = intent.getStringExtra(TourismActivity.TPDESC);
-        placeLoc = intent.getStringExtra(TourismActivity.TPLOC);
-        placeIMG = intent.getIntExtra(TourismActivity.TPIMG, 0);
+        placeName = intent.getStringExtra(LeisureActivity.LENAME);
+        placeLoc = intent.getStringExtra(LeisureActivity.LELOC);
+        placeIMG = intent.getIntExtra(LeisureActivity.LEIMG, 0);
 
         tvName = (TextView) findViewById(R.id.textViewname);
-        tvDesc = (TextView) findViewById(R.id.textViewdesc);
         tvLoc = (TextView) findViewById(R.id.textViewloc);
         ivIMG = (ImageView) findViewById(R.id.imageView);
 
         tvName.setText(placeName);
-        tvDesc.setText(placeDesc);
         tvLoc.setText("Open in Maps");
         ivIMG.setBackgroundResource(placeIMG);
 
@@ -51,13 +44,14 @@ public class TourismPlaceActivity extends ActionBarActivity {
                 startActivity(mapIntent);
             }
         });
+
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_tourism_place, menu);
+        getMenuInflater().inflate(R.menu.menu_leisure_place, menu);
         return true;
     }
 

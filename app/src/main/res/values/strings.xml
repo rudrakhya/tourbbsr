@@ -7,4 +7,8 @@
     <string name="title_activity_tourism_place">Tourism Place</string>
     <string name="title_activity_special_alerts">Special Alerts</string>
     <string name="title_activity_special_alert_event">Special Alert Event</string>
+    <string name="title_activity_transport">Transport</string>
+    <string name="title_activity_leisure">Leisure</string>
+    <string name="title_activity_activity_leisureplace">Leisure Place</string>
+    <string name="title_activity_leisure_place">Leisure Place</string>
 </resources>

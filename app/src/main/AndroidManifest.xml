@@ -48,6 +48,38 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="in.cetb.rudrakhya.tourbbsr.SpecialAlertsActivity" />
         </activity>
+        <activity
+            android:name=".TransportActivity"
+            android:label="@string/title_activity_transport"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.cetb.rudrakhya.tourbbsr.MainActivity" />
+        </activity>
+        <activity
+            android:name=".LeisureActivity"
+            android:label="@string/title_activity_leisure"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.cetb.rudrakhya.tourbbsr.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activity_leisureplace"
+            android:label="@string/title_activity_activity_leisureplace" >
+        </activity>
+        <activity
+            android:name=".leisure_place"
+            android:label="@string/title_activity_leisure_place" >
+        </activity>
+        <activity
+            android:name=".LeisurePlaceActivity"
+            android:label="@string/title_activity_leisure_place"
+            android:parentActivityName=".LeisureActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.cetb.rudrakhya.tourbbsr.LeisureActivity" />
+        </activity>
     </application>
 
 </manifest>

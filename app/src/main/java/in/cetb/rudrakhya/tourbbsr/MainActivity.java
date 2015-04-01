@@ -23,12 +23,13 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void gotoTransport(View view){
-
+        Intent intent = new Intent(MainActivity.this, TransportActivity.class);
+        startActivity(intent);
     }
 
     public void gotoLeisure(View view){
-       
-
+        Intent intent = new Intent(MainActivity.this, LeisureActivity.class);
+        startActivity(intent);
     }
 
     public void gotoSpecialAlerts(View view){
